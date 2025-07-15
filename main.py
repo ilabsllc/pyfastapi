@@ -11,7 +11,7 @@ class AddRequest(BaseModel):
 # Simulate startup delay
 start_time = time.time()
 
-@app.get("/healthz")
+@app.get("/liveness")
 def liveness_probe():
     return {"status": "alive"}
 
