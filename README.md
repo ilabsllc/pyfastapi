@@ -95,7 +95,6 @@ fastapi dev main.py
 Then open:
 
 - [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) – Swagger UI
-- [http://127.0.0.1:8000/healthz](http://127.0.0.1:8000/healthz) – Liveness probe
 
 ---
 
