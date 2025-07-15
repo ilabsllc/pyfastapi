@@ -61,7 +61,7 @@ class AddRequest(BaseModel):
     a: float
     b: float
 
-@app.get("/healthz")
+@app.get("/liveness")
 def liveness():
     return {"status": "alive"}
 
@@ -73,6 +73,8 @@ def readiness():
 def add(req: AddRequest):
     return {"result": req.a + req.b}
 ```
+
+Earlier used /healthz which had issues running on Google Cloud Run. So renamed it as /liveness and it works now.
 
 ---
 
